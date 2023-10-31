@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: aquamarine;
+            height: 100px;
+            line-height: 100px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 40px;
+        }
+
+        ul {
+            display: flex;
+            gap: 30px;
+            margin-right: 6%;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .logo {
+            font-size: 32px;
+            color: white;
+        }
+
+        .chechBtn {
+            color: white;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        @media (max-width:660px) {
+
+            nav {
+                padding: 0%;
+            }
+
+            .chechBtn {
+                display: block;
+                margin-right: 6%;
+            }
+
+            .logo {
+                margin-left: 6%;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                margin-right: 6%;
+                margin-top: 100px;
+                background-color: cadetblue;
+                height: 80vh;
+                width: 100%;
+                align-items: center;
+                position: fixed;
+                transition: all .50s;
+            }
+
+            #check:checked~ul {
+                margin-left: -300%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label class="logo"> Logo</label>
+        <ul>
+            <li>
+                <a>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a>
+                    Service
+                </a>
+            </li>
+            <li>
+                <a>
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a>
+                    About
+                </a>
+            </li>
+        </ul>
+        <label for="check" class="chechBtn">
+            <i style="font-size:24px" class="fa">&#xf0c9;</i>
+        </label>
+    </nav>
+
+</body>
+
+</html>
